@@ -1,59 +1,7 @@
-function getCardId(value) {
-  const alfabet = [
-    'A♣',
-    '2♣',
-    '3♣',
-    '4♣',
-    '5♣',
-    '6♣',
-    '7♣',
-    '8♣',
-    '9♣',
-    '10♣',
-    'J♣',
-    'Q♣',
-    'K♣',
-    'A♦',
-    '2♦',
-    '3♦',
-    '4♦',
-    '5♦',
-    '6♦',
-    '7♦',
-    '8♦',
-    '9♦',
-    '10♦',
-    'J♦',
-    'Q♦',
-    'K♦',
-    'A♥',
-    '2♥',
-    '3♥',
-    '4♥',
-    '5♥',
-    '6♥',
-    '7♥',
-    '8♥',
-    '9♥',
-    '10♥',
-    'J♥',
-    'Q♥',
-    'K♥',
-    'A♠',
-    '2♠',
-    '3♠',
-    '4♠',
-    '5♠',
-    '6♠',
-    '7♠',
-    '8♠',
-    '9♠',
-    '10♠',
-    'J♠',
-    'Q♠',
-    'K♠',
-  ];
-  return alfabet.indexOf(value, 0);
+function toNumber(value, def) {
+  if (typeof Number(value) === 'number' || value instanceof Number) {
+    return Number(value);
+  }
+  return def;
 }
-
-console.log(getCardId('10♠'));
+console.log(toNumber('test', 0));
